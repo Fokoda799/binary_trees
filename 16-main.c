@@ -30,6 +30,8 @@ int main(void)
     printf("Perfect: %d\n\n", perfect);
 
     root->right->right->right = binary_tree_node(root->right->right, 10);
+    root->right->left->right = binary_tree_node(root->right->left, 10);
+    root->right->left->left = binary_tree_node(root->right->left, 10);
     binary_tree_print(root);
     perfect = binary_tree_is_perfect(root);
     printf("Perfect: %d\n", perfect);
