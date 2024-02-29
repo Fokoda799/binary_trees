@@ -8,8 +8,8 @@
  * @func: pointerto a func to print data in each node.
  *
  * description: this function traverses a binary tree in preorder
- *              (root -> left -> right) manner. 
- * 
+ * (root -> left -> right) manner.
+ *
  * Return: void
  */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
