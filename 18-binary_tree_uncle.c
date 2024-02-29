@@ -2,22 +2,20 @@
 
 /**
  * binary_tree_sibling - finds the sibling of a node
- * @node: a ointer to the node to find the sibling.
+ * @node: a pointer to the node to find the sibling.
  *
  * Return: a pointer to the sibling node
  */
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
-	if (node == NULL || node->parent == NULL)
+	if (!node || !node->parent ||
+	    !node->parent->left || !node->parent->right)
 		return (NULL);
 
-	binary_tree_t *l_sibling = node->parent->left;
-	binary_tree_t *r_sibling = node->parent->right;
-
-	if (node == l_sibling)
-		return (r_sibling);
+	if (node->parent->left->n == node->n)
+		return (node->parent->right);
 	else
-		return (l_sibling);
+		return (node->parent->left);
 }
 
 /**
