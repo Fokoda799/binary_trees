@@ -3,7 +3,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_inorder - 
+ * * binary_tree_inorder - goes through binary tree using in-order traversal
  * @tree: pointer to the root of the tree.
  * @func: pointer to a func to print data in each node.
  *
